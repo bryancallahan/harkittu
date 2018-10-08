@@ -1,0 +1,105 @@
+@import "../../style/global.less";
+
+.btn {
+  padding: 1.5*@cushion 3.5*@cushion;
+  outline: 0;
+  background: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.6em;
+  margin-right: @cushion;
+  cursor: pointer;
+
+  &:hover {
+    background: darken(white, @hover-color-scale);
+  }
+
+  &:active {
+    background: darken(white, 2*@hover-color-scale);
+  }
+
+  & > * {
+    margin-right: @cushion;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  svg {
+    margin-bottom: -1px; // Small tweak for Font Awesome icons
+  }
+
+  &.light {
+    border: 1px solid white;
+    &:hover {
+      border: 1px solid darken(white, @hover-color-scale);
+    }
+  }
+
+  &.primaryA {
+    border: 1px solid @primary-a;
+    background: @primary-a;
+    color: white;
+    &:hover {
+      border: 1px solid darken(@primary-a, @hover-color-scale);
+      background: darken(@primary-a, @hover-color-scale);
+    }
+    &:active {
+      background: darken(@primary-a, 2*@hover-color-scale);
+    }
+  }
+
+  &.primaryB {
+    border: 1px solid @primary-b;
+    background: @primary-b;
+    color: white;
+    &:hover {
+      border: 1px solid darken(@primary-b, @hover-color-scale);
+      background: darken(@primary-b, @hover-color-scale);
+    }
+    &:active {
+      background: darken(@primary-b, 2*@hover-color-scale);
+    }
+  }
+
+  &.primaryC {
+    border: 1px solid @primary-c;
+    background: @primary-c;
+    color: white;
+    &:hover {
+      border: 1px solid darken(@primary-c, @hover-color-scale);
+      background: darken(@primary-c, @hover-color-scale);
+    }
+    &:active {
+      background: darken(@primary-c, 2*@hover-color-scale);
+    }
+  }
+
+  &.primaryD {
+    border: 1px solid @primary-d;
+    background: @primary-d;
+    color: white;
+    &:hover {
+      border: 1px solid darken(@primary-d, @hover-color-scale);
+      background: darken(@primary-d, @hover-color-scale);
+    }
+    &:active {
+      background: darken(@primary-d, 2*@hover-color-scale);
+    }
+  }
+
+  &.primaryE {
+    border: 1px solid @primary-e;
+    background: @primary-e;
+    color: white;
+    &:hover {
+      border: 1px solid darken(@primary-e, @hover-color-scale);
+      background: darken(@primary-e, @hover-color-scale);
+    }
+    &:active {
+      background: darken(@primary-e, 2*@hover-color-scale);
+    }
+  }
+}

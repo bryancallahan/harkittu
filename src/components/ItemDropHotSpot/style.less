@@ -1,0 +1,26 @@
+@import "../../style/global.less";
+
+@insertionHotSpotColdHeight: 4px;
+:export {
+  insertionHotSpotColdHeight: @insertionHotSpotColdHeight;
+}
+
+.insertionHotSpot {
+  height: @insertionHotSpotColdHeight;
+  margin-top: -@insertionHotSpotColdHeight / 2;
+  margin-bottom: -@insertionHotSpotColdHeight / 2;
+  transition: height 250ms ease-in-out;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+}
+
+.insertionHotSpot.emphasized {
+  height: auto;
+  margin: 2 * @cushion;
+  padding: 2 * @cushion;
+  background: #f0f0f0;
+  color: #c0c0c0;
+  font-style: oblique;
+  font-size: 0.6em;
+}

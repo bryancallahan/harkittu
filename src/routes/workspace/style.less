@@ -1,0 +1,54 @@
+@import "../../style/global.less";
+
+.workspace {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .log {
+
+    position: absolute;
+    top: 0;
+    right: @tools-width;
+    bottom: 0;
+    left: 0;
+
+    padding: 2 * @spacing;
+    overflow-y: auto;
+
+    h1 {
+      color: @primary-a;
+      font-size: 14px;
+      margin: 18px 0 0 0;
+
+      &:first-of-type {
+        margin: 0;
+      }
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+
+    h2 {
+      color: @primary-b;
+      font-size: 12px;
+      margin: 6px 0 0 0;
+    }
+
+    .tasks {
+      margin-left: 18px;
+    }
+  }
+
+  .tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: @tools-width;
+    overflow-y: auto;
+    border-left: 2px solid @primary-a;
+  }
+}

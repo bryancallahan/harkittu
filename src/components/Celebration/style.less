@@ -1,0 +1,23 @@
+@import "../../style/global.less";
+
+.celebration {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+
+  &.animating {
+    z-index: 10;
+  }
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Note: width and height set in javascript to get correct aspect-ratio */
+  width: 100%;
+  height: 100%;
+}

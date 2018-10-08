@@ -1,0 +1,64 @@
+@import "../../style/global.less";
+
+.checkbox {
+
+  & > label {
+    float: left;
+    position: relative;
+    min-width: @checkbox-size;
+    min-height: @checkbox-size;
+    vertical-align: middle;
+    margin: @cushion;
+    cursor: pointer;
+
+    &:hover > input + span {
+      background-color: darken(#eee, @hover-color-scale);
+    }
+
+    & > input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked + span {
+        background-color: @primary-d;
+        &:hover {
+          background-color: darken(@primary-d, @hover-color-scale);
+        }
+      }
+
+      &:checked + span:after {
+        display: block;
+      }
+    }
+
+    & > input + span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @checkbox-size;
+      height: @checkbox-size;
+      background-color: #e0e0e0;
+
+      &:after {
+        content: '';
+
+        display: none;
+
+        position: absolute;
+        left: 0.32 * @checkbox-size;
+        top: 0.15 * @checkbox-size;
+        width: 0.2 * @checkbox-size;
+        height: 0.4 * @checkbox-size;
+        border: solid white;
+        border-width: 0 0.12*@checkbox-size 0.12*@checkbox-size 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  & > label + div {
+    position: relative;
+    margin-left: @checkbox-size + 2*@cushion;
+  }
+}
