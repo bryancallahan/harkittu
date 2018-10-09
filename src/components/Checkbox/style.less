@@ -2,7 +2,7 @@
 
 .checkbox {
 
-  min-height: 2*@cushion + @checkbox-size + 2*@cushion + @cushion/2.0;
+  min-height: 2*@cushion + @checkbox-size + 2*@cushion + @cushion;
   
   & > label {
     float: left;
@@ -62,5 +62,7 @@
   & > label + div {
     position: relative;
     margin-left: @checkbox-size + 2*@cushion;
+    margin-right: @cushion;
+    margin-bottom: @cushion;
   }
 }
